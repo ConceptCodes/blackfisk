@@ -7,9 +7,9 @@ export default function GameCard({color, title, index}) {
         <span className="bg-black rounded-full flex items-center justify-center text-white w-10 h-10">{index}</span>
             <div className="space-x-3"> 
                 <h1 className="transform rotate-90 uppercase font-bold text-6xl">{title}</h1>
-                <span className="border-4 border-black w-20 rounded-full flex items-center justify-center p-5">
+                <button className="border-4 border-black w-20 rounded-full flex items-center justify-center p-5" onClick={()=> window.alert(color)}>
                     <ArrowLeftIcon className="h-6" />
-                </span>
+                </button>
             </div>
     </figure>
     )

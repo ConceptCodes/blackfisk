@@ -5,8 +5,7 @@ This is a game that you can play against friends to earn crypto. Big shoutout to
 [Preview Link](https://blackfisk.conceptcodes.dev)
 
 ## Usage
-- Create a new game and share link with your friend
--
+
 
 ![Demo Image](./demo.png)
 

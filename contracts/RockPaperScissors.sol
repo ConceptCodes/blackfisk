@@ -2,20 +2,16 @@
 
 pragma solidity ^0.8.0;
 
-
-
 /** 
     @title This is a smart contract to represent the game of Rock paper Scissors
 */
 contract RockPaperScissors {
-    // The minimum bet
-    uint constant public BET_MIN = .25 ether;    
-    // Max delay of revelation phase
-    uint constant public REVEAL_TIMEOUT = 5 minutes; 
+    uint constant public BET_MIN = .25 ether; // The minimum bet  
+    uint constant public REVEAL_TIMEOUT = 5 minutes; // Max delay to reveal hand
     // Bet of player 1 
-    // uint public initialBet;
-    // Moment of first reveal                            
-    uint private firstReveal;                          
+    // uint public initialBet;  
+    uint public initialBet;
+    uint private firstReveal;  // Moment of first reveal                          
 
     enum Moves { None, Rock, Paper, Scissors }
      // Possible outcomes
@@ -37,7 +33,7 @@ contract RockPaperScissors {
     modifier validBet() {
         //Bet must be greater than a minimum amount
         require(msg.value >= BET_MIN); 
-        // require(initialBet == 0 || msg.value >= initialBet); // and greater than bet of first player
+        require(initialBet == 0 || msg.value >= initialBet); // and greater than bet of first player
         _;
     }
 

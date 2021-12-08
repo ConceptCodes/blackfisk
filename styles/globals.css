@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.pvp {
+    @apply bg-[#249F9C];
+}
+
+.streamer {
+    @apply bg-[#ED1B76];
+}

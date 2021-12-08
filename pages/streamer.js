@@ -1,7 +1,14 @@
+import Head from 'next/head'
+
 export default function streamer() {
     return (
-        <div>
-            
-        </div>
+        <>
+        <Head>
+            <title>STREAMER | blackfisk</title>
+        </Head>
+            <main className="streamer">
+                
+            </main>
+        </>
     )
 }
